@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Frugy_Store.Views
+namespace Frugy_Store.Views.View_Admin
 {
-    public partial class V_Login : Form
+    public partial class V_BerandaAdmin : Form
     {
-        public V_Login()
+        public V_BerandaAdmin()
         {
             InitializeComponent();
         }
