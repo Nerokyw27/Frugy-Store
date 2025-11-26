@@ -24,12 +24,11 @@ namespace Frugy_Store.Controller
                                     SELECT role, nama_lengkap, username, password 
                                     FROM akun WHERE username = @username AND password = @password";
 
-                    string hashedPassword = PasswordHelper.HashPassword(akun.Password);
 
                     using (var cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@username", akun.Username);
-                        cmd.Parameters.AddWithValue("@password", hashedPassword);
+                        cmd.Parameters.AddWithValue("@password", akun.Password);
 
                         using (var read = cmd.ExecuteReader())
                         {
@@ -70,13 +69,12 @@ namespace Frugy_Store.Controller
                                     INSERT INTO akun (nama_lengkap, username, password, role) 
                                     VALUES (@nama_lengkap, @username, @password, @role)";
 
-                    string hashedPassword = PasswordHelper.HashPassword(akun.Password);
 
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@nama_lengkap", akun.NamaLengkap);
                         cmd.Parameters.AddWithValue("@username", akun.Username);
-                        cmd.Parameters.AddWithValue("@password", hashedPassword);
+                        cmd.Parameters.AddWithValue("@password", akun.Password);
                         cmd.Parameters.AddWithValue("@role", akun.Role.ToString());
 
                         int result = cmd.ExecuteNonQuery();

@@ -1,3 +1,6 @@
+using Frugy_Store.Views;
+using Frugy_Store.Views.View_Admin;
+
 namespace Frugy_Store
 {
     internal static class Program

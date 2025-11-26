@@ -118,10 +118,31 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Login UI fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Login UI fix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="LaporanBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\LaporanBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login UI fix (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login UI fix (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Logins" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Logins.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="TransaksiBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\TransaksiBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ProdukBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ProdukBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tampilan Utama Admin kosongan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tampilan Utama Admin kosongan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tampilan Utama Kasir (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tampilan Utama Kasir (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login UI fix" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login UI fix.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ManageAkunBtn" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ManageAkunBtn.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

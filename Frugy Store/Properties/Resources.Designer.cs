@@ -63,6 +63,16 @@ namespace Frugy_Store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap LaporanBtn {
+            get {
+                object obj = ResourceManager.GetObject("LaporanBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Login_UI_fix {
             get {
                 object obj = ResourceManager.GetObject("Login UI fix", resourceCulture);
@@ -73,9 +83,69 @@ namespace Frugy_Store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Login_UI_fix__1_ {
+            get {
+                object obj = ResourceManager.GetObject("Login UI fix (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logins {
             get {
                 object obj = ResourceManager.GetObject("Logins", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ManageAkunBtn {
+            get {
+                object obj = ResourceManager.GetObject("ManageAkunBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ProdukBtn {
+            get {
+                object obj = ResourceManager.GetObject("ProdukBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tampilan_Utama_Admin_kosongan {
+            get {
+                object obj = ResourceManager.GetObject("tampilan Utama Admin kosongan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tampilan_Utama_Kasir__1_ {
+            get {
+                object obj = ResourceManager.GetObject("tampilan Utama Kasir (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap TransaksiBtn {
+            get {
+                object obj = ResourceManager.GetObject("TransaksiBtn", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
