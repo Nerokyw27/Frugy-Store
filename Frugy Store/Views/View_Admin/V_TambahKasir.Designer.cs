@@ -1,6 +1,6 @@
 ﻿namespace Frugy_Store.Views.View_Admin
 {
-    partial class V_BerandaAdmin
+    partial class V_TambahKasir
     {
         /// <summary>
         /// Required designer variable.
@@ -30,14 +30,14 @@
         {
             SuspendLayout();
             // 
-            // V_BerandaAdmin
+            // V_TambahKasir
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Name = "V_BerandaAdmin";
-            Text = "V_BerandaAdmin";
-            Load += V_BerandaAdmin_Load;
+            Name = "V_TambahKasir";
+            Text = "V_TambahKasir";
+            Load += V_TambahKasir_Load;
             ResumeLayout(false);
         }
 

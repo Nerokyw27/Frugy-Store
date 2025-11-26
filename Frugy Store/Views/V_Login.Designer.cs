@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            HalLogin = new Label();
-            usnLabel = new Label();
-            passLabel = new Label();
-            tbUsernameLgn = new TextBox();
-            tbPasswordLgn = new TextBox();
             btnLogin = new Button();
+            tbPasswordLgn = new TextBox();
+            tbUsernameLgn = new TextBox();
+            passLabel = new Label();
+            usnLabel = new Label();
+            HalLogin = new Label();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,28 +54,36 @@
             panel1.Size = new Size(352, 453);
             panel1.TabIndex = 0;
             // 
-            // HalLogin
+            // btnLogin
             // 
-            HalLogin.AutoSize = true;
-            HalLogin.BackColor = Color.Transparent;
-            HalLogin.Font = new Font("Verdana", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            HalLogin.ForeColor = Color.White;
-            HalLogin.Location = new Point(122, 88);
-            HalLogin.Name = "HalLogin";
-            HalLogin.Size = new Size(110, 41);
-            HalLogin.TabIndex = 0;
-            HalLogin.Text = "Login";
+            btnLogin.BackColor = Color.YellowGreen;
+            btnLogin.Font = new Font("Verdana", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogin.ForeColor = Color.White;
+            btnLogin.Location = new Point(60, 360);
+            btnLogin.Name = "btnLogin";
+            btnLogin.Size = new Size(237, 52);
+            btnLogin.TabIndex = 5;
+            btnLogin.Text = "Masuk";
+            btnLogin.UseVisualStyleBackColor = false;
+            btnLogin.Click += btnLogin_Click;
             // 
-            // usnLabel
+            // tbPasswordLgn
             // 
-            usnLabel.AutoSize = true;
-            usnLabel.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            usnLabel.ForeColor = Color.White;
-            usnLabel.Location = new Point(21, 149);
-            usnLabel.Name = "usnLabel";
-            usnLabel.Size = new Size(84, 18);
-            usnLabel.TabIndex = 1;
-            usnLabel.Text = "Username";
+            tbPasswordLgn.BorderStyle = BorderStyle.None;
+            tbPasswordLgn.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbPasswordLgn.Location = new Point(39, 289);
+            tbPasswordLgn.Name = "tbPasswordLgn";
+            tbPasswordLgn.Size = new Size(272, 28);
+            tbPasswordLgn.TabIndex = 4;
+            // 
+            // tbUsernameLgn
+            // 
+            tbUsernameLgn.BorderStyle = BorderStyle.None;
+            tbUsernameLgn.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbUsernameLgn.Location = new Point(39, 187);
+            tbUsernameLgn.Name = "tbUsernameLgn";
+            tbUsernameLgn.Size = new Size(272, 28);
+            tbUsernameLgn.TabIndex = 3;
             // 
             // passLabel
             // 
@@ -88,35 +96,28 @@
             passLabel.TabIndex = 2;
             passLabel.Text = "Password";
             // 
-            // tbUsernameLgn
+            // usnLabel
             // 
-            tbUsernameLgn.BorderStyle = BorderStyle.None;
-            tbUsernameLgn.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbUsernameLgn.Location = new Point(39, 187);
-            tbUsernameLgn.Name = "tbUsernameLgn";
-            tbUsernameLgn.Size = new Size(272, 28);
-            tbUsernameLgn.TabIndex = 3;
+            usnLabel.AutoSize = true;
+            usnLabel.Font = new Font("Verdana", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            usnLabel.ForeColor = Color.White;
+            usnLabel.Location = new Point(21, 149);
+            usnLabel.Name = "usnLabel";
+            usnLabel.Size = new Size(84, 18);
+            usnLabel.TabIndex = 1;
+            usnLabel.Text = "Username";
             // 
-            // tbPasswordLgn
+            // HalLogin
             // 
-            tbPasswordLgn.BorderStyle = BorderStyle.None;
-            tbPasswordLgn.Font = new Font("Verdana", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbPasswordLgn.Location = new Point(39, 289);
-            tbPasswordLgn.Name = "tbPasswordLgn";
-            tbPasswordLgn.Size = new Size(272, 28);
-            tbPasswordLgn.TabIndex = 4;
-            // 
-            // btnLogin
-            // 
-            btnLogin.BackColor = Color.YellowGreen;
-            btnLogin.Font = new Font("Verdana", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(60, 360);
-            btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(237, 52);
-            btnLogin.TabIndex = 5;
-            btnLogin.Text = "Masuk";
-            btnLogin.UseVisualStyleBackColor = false;
+            HalLogin.AutoSize = true;
+            HalLogin.BackColor = Color.Transparent;
+            HalLogin.Font = new Font("Verdana", 19.8000011F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            HalLogin.ForeColor = Color.White;
+            HalLogin.Location = new Point(122, 88);
+            HalLogin.Name = "HalLogin";
+            HalLogin.Size = new Size(110, 41);
+            HalLogin.TabIndex = 0;
+            HalLogin.Text = "Login";
             // 
             // V_Login
             // 
@@ -129,6 +130,7 @@
             DoubleBuffered = true;
             Name = "V_Login";
             Text = "V_Login";
+            Load += V_Login_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
