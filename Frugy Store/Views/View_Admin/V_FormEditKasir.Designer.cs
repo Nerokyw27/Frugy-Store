@@ -68,6 +68,8 @@
             panel2 = new Panel();
             txtOldUsername = new TextBox();
             LBUsnTambahKasir = new Label();
+            panel13 = new Panel();
+            label8 = new Label();
             panel1.SuspendLayout();
             panel11.SuspendLayout();
             panel10.SuspendLayout();
@@ -80,6 +82,7 @@
             panel4.SuspendLayout();
             panel3.SuspendLayout();
             panel2.SuspendLayout();
+            panel13.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -501,12 +504,34 @@
             LBUsnTambahKasir.TabIndex = 2;
             LBUsnTambahKasir.Text = "Username";
             // 
+            // panel13
+            // 
+            panel13.BackColor = Color.FromArgb(143, 221, 60);
+            panel13.Controls.Add(label8);
+            panel13.Location = new Point(1630, 12);
+            panel13.Name = "panel13";
+            panel13.Size = new Size(290, 69);
+            panel13.TabIndex = 3;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.BackColor = Color.FromArgb(143, 221, 60);
+            label8.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label8.ForeColor = Color.White;
+            label8.Location = new Point(17, -12);
+            label8.Name = "label8";
+            label8.Size = new Size(221, 81);
+            label8.TabIndex = 1;
+            label8.Text = "Profile";
+            // 
             // V_FormEditKasir
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.tampilan_Utama_Admin_kosongan;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(panel13);
             Controls.Add(panel1);
             Name = "V_FormEditKasir";
             Text = "V_FormEditKasir";
@@ -534,6 +559,8 @@
             panel3.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            panel13.ResumeLayout(false);
+            panel13.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -579,5 +606,7 @@
         private Label label2;
         private Label label7;
         private Label txtMulaiBekerjaEdit;
+        private Panel panel13;
+        private Label label8;
     }
 }

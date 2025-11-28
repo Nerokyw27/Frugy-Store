@@ -71,6 +71,8 @@
             panel3 = new Panel();
             textBox1 = new TextBox();
             LBUsnTambahKasir = new Label();
+            panel15 = new Panel();
+            label9 = new Label();
             panel1.SuspendLayout();
             panel8.SuspendLayout();
             panel9.SuspendLayout();
@@ -85,6 +87,7 @@
             panel4.SuspendLayout();
             panel2.SuspendLayout();
             panel3.SuspendLayout();
+            panel15.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -533,12 +536,34 @@
             LBUsnTambahKasir.TabIndex = 2;
             LBUsnTambahKasir.Text = "Username";
             // 
+            // panel15
+            // 
+            panel15.BackColor = Color.FromArgb(143, 221, 60);
+            panel15.Controls.Add(label9);
+            panel15.Location = new Point(1614, 12);
+            panel15.Name = "panel15";
+            panel15.Size = new Size(290, 69);
+            panel15.TabIndex = 16;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.BackColor = Color.FromArgb(143, 221, 60);
+            label9.Font = new Font("Segoe UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label9.ForeColor = Color.White;
+            label9.Location = new Point(17, -12);
+            label9.Name = "label9";
+            label9.Size = new Size(221, 81);
+            label9.TabIndex = 1;
+            label9.Text = "Profile";
+            // 
             // V_FormTambahKasir
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.tampilan_Utama_Admin_kosongan;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(panel15);
             Controls.Add(panel1);
             Name = "V_FormTambahKasir";
             Text = "V_FormTambahKasir";
@@ -570,6 +595,8 @@
             panel2.PerformLayout();
             panel3.ResumeLayout(false);
             panel3.PerformLayout();
+            panel15.ResumeLayout(false);
+            panel15.PerformLayout();
             ResumeLayout(false);
         }
 
@@ -618,5 +645,7 @@
         private Label LBEmailTambahKasir;
         private Button BtnSimpanKasir;
         private Label LBMulaiBekerja;
+        private Panel panel15;
+        private Label label9;
     }
 }
