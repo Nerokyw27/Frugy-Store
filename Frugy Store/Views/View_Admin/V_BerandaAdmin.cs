@@ -13,11 +13,12 @@ namespace Frugy_Store.Views.View_Admin
 {
     public partial class V_BerandaAdmin : Form
     {
-        private IProduk C_Produk;
-        public V_BerandaAdmin(IProduk produkInterface)
+        //private IProduk C_Produk;
+        //public V_BerandaAdmin(IProduk produkInterface)
+        public V_BerandaAdmin()
         {
             InitializeComponent();
-            C_Produk = produkInterface;
+            //C_Produk = produkInterface;
             
         }
 

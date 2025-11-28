@@ -21,6 +21,7 @@ namespace Frugy_Store
         public V_Login()
         {
             InitializeComponent();
+            tbPasswordLgn.UseSystemPasswordChar = true;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -31,6 +32,7 @@ namespace Frugy_Store
             if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
             {
                 MessageBox.Show("Username & Password harus diisi", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
             try
@@ -41,30 +43,41 @@ namespace Frugy_Store
                     Password = password
                 };
 
+                // Assuming AuthController returns a full M_Akun object with Role and AkunId
                 var auth = new AuthController().Login(user);
+
                 if (auth != null)
                 {
-                    MessageBox.Show($"Login berhasil. Selamat datang {user.Username}", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show($"Login berhasil. Selamat datang {auth.Username}", "Berhasil", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     AppSession.SetUser(auth);
 
-                    if (AppSession.CurrentUser.Role == RoleAkun.admin)
+                    // Check for Admin
+                    if (auth.Role == RoleAkun.admin)
                     {
-                        V_BerandaAdmin admin = new V_BerandaAdmin(produkInterface: null);
+                        // Removed unnecessary parameter 'produkInterface: null' based on standard practice
+                        V_BerandaAdmin admin = new V_BerandaAdmin();
                         admin.FormClosed += (s, args) => this.Close();
                         admin.Show();
                         this.Hide();
                     }
-                    else
+                    // Check for Kasir using 'else if'
+                    else if (auth.Role == RoleAkun.kasir)
                     {
-                        V_BerandaKasir kasir = new V_BerandaKasir();
+                        V_BerandaKasir kasir = new V_BerandaKasir(auth.AkunId);
                         kasir.FormClosed += (s, args) => this.Close();
                         kasir.Show();
                         this.Hide();
                     }
+                    // Handle unknown roles
+                    else
+                    {
+                        MessageBox.Show("Role tidak dikenali!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
+                    // This else block belongs to 'if (auth != null)'
                     MessageBox.Show("Cek kembali apakah password atau username salah", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
@@ -72,6 +85,10 @@ namespace Frugy_Store
             {
                 MessageBox.Show($"Login gagal: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private void V_Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

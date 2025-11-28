@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_Login));
             tbUsernameLgn = new TextBox();
             tbPasswordLgn = new TextBox();
             btnLogin = new Button();
@@ -35,18 +36,22 @@
             // 
             // tbUsernameLgn
             // 
-            tbUsernameLgn.Font = new Font("Poppins", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbUsernameLgn.Location = new Point(1275, 329);
+            tbUsernameLgn.BorderStyle = BorderStyle.None;
+            tbUsernameLgn.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbUsernameLgn.Location = new Point(1267, 343);
+            tbUsernameLgn.Margin = new Padding(3, 2, 3, 2);
             tbUsernameLgn.Name = "tbUsernameLgn";
-            tbUsernameLgn.Size = new Size(519, 63);
+            tbUsernameLgn.Size = new Size(517, 34);
             tbUsernameLgn.TabIndex = 0;
             // 
             // tbPasswordLgn
             // 
-            tbPasswordLgn.Font = new Font("Poppins", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbPasswordLgn.Location = new Point(1275, 537);
+            tbPasswordLgn.BorderStyle = BorderStyle.None;
+            tbPasswordLgn.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbPasswordLgn.Location = new Point(1267, 535);
+            tbPasswordLgn.Margin = new Padding(3, 2, 3, 2);
             tbPasswordLgn.Name = "tbPasswordLgn";
-            tbPasswordLgn.Size = new Size(519, 63);
+            tbPasswordLgn.Size = new Size(517, 34);
             tbPasswordLgn.TabIndex = 1;
             // 
             // btnLogin
@@ -54,11 +59,12 @@
             btnLogin.BackColor = Color.Transparent;
             btnLogin.FlatAppearance.BorderSize = 0;
             btnLogin.FlatStyle = FlatStyle.Flat;
-            btnLogin.Font = new Font("Poppins", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnLogin.Font = new Font("Microsoft Sans Serif", 22.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(1263, 724);
+            btnLogin.Location = new Point(1292, 862);
+            btnLogin.Margin = new Padding(3, 2, 3, 2);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(542, 83);
+            btnLogin.Size = new Size(474, 62);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "LOGIN";
             btnLogin.UseVisualStyleBackColor = false;
@@ -66,15 +72,17 @@
             // 
             // V_Login
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackgroundImage = Properties.Resources.Login_UI_fix__1_;
-            ClientSize = new Size(1902, 1033);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1904, 1041);
             Controls.Add(btnLogin);
             Controls.Add(tbPasswordLgn);
             Controls.Add(tbUsernameLgn);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "V_Login";
             Text = "V_Login";
+            Load += V_Login_Load;
             ResumeLayout(false);
             PerformLayout();
         }

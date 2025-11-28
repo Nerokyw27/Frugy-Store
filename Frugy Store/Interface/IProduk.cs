@@ -13,6 +13,6 @@ namespace Frugy_Store.Interface
         void TambahProduk(M_Produk produk);
 
         List<M_Produk> GetByUserId(int userId);
-        List<M_Produk> GetAllProduk();
+        List<M_Produk> GetProduk();
     }
 }

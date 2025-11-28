@@ -40,9 +40,10 @@
             btnTransaksiKsr.BackgroundImageLayout = ImageLayout.Zoom;
             btnTransaksiKsr.FlatAppearance.BorderSize = 0;
             btnTransaksiKsr.FlatStyle = FlatStyle.Flat;
-            btnTransaksiKsr.Location = new Point(274, 125);
+            btnTransaksiKsr.Location = new Point(240, 94);
+            btnTransaksiKsr.Margin = new Padding(3, 2, 3, 2);
             btnTransaksiKsr.Name = "btnTransaksiKsr";
-            btnTransaksiKsr.Size = new Size(535, 815);
+            btnTransaksiKsr.Size = new Size(468, 611);
             btnTransaksiKsr.TabIndex = 0;
             btnTransaksiKsr.UseVisualStyleBackColor = false;
             btnTransaksiKsr.Click += btnTransaksiKsr_Click;
@@ -54,9 +55,10 @@
             btnLaporanKsr.BackgroundImageLayout = ImageLayout.Zoom;
             btnLaporanKsr.FlatAppearance.BorderSize = 0;
             btnLaporanKsr.FlatStyle = FlatStyle.Flat;
-            btnLaporanKsr.Location = new Point(1115, 125);
+            btnLaporanKsr.Location = new Point(976, 94);
+            btnLaporanKsr.Margin = new Padding(3, 2, 3, 2);
             btnLaporanKsr.Name = "btnLaporanKsr";
-            btnLaporanKsr.Size = new Size(535, 815);
+            btnLaporanKsr.Size = new Size(468, 611);
             btnLaporanKsr.TabIndex = 1;
             btnLaporanKsr.UseVisualStyleBackColor = false;
             btnLaporanKsr.Click += btnLaporanKsr_Click;
@@ -66,25 +68,29 @@
             btnLogoutKsr.BackColor = Color.YellowGreen;
             btnLogoutKsr.BackgroundImageLayout = ImageLayout.None;
             btnLogoutKsr.FlatAppearance.BorderSize = 0;
-            btnLogoutKsr.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogoutKsr.Location = new Point(648, 15);
+            btnLogoutKsr.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnLogoutKsr.Location = new Point(650, 20);
+            btnLogoutKsr.Margin = new Padding(3, 2, 3, 2);
             btnLogoutKsr.Name = "btnLogoutKsr";
-            btnLogoutKsr.Size = new Size(178, 51);
+            btnLogoutKsr.Size = new Size(156, 38);
             btnLogoutKsr.TabIndex = 2;
             btnLogoutKsr.Text = "Logout";
             btnLogoutKsr.UseVisualStyleBackColor = false;
             // 
             // V_BerandaKasir
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.tampilan_Utama_Kasir__1_;
-            ClientSize = new Size(1902, 1033);
+            ClientSize = new Size(1904, 1041);
             Controls.Add(btnLogoutKsr);
             Controls.Add(btnLaporanKsr);
             Controls.Add(btnTransaksiKsr);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "V_BerandaKasir";
             Text = "V_BerandaKasir";
+            WindowState = FormWindowState.Maximized;
+            Load += V_BerandaKasir_Load;
             ResumeLayout(false);
         }
 
