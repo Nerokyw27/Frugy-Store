@@ -21,7 +21,7 @@ namespace Frugy_Store.Controller
                 {
                     conn.Open();
                     string query = @"
-                                    SELECT role, nama_lengkap, username, password 
+                                    SELECT akun_id, role, nama_lengkap, username, password 
                                     FROM akun WHERE username = @username AND password = @password";
 
 
@@ -34,15 +34,17 @@ namespace Frugy_Store.Controller
                         {
                             if (read.Read())
                             {
-                                string role = read.GetString(0);
+                                int id = read.GetInt32(0);
+                                string role = read.GetString(1);
                                 RoleAkun roleEnum = (RoleAkun)Enum.Parse(typeof(RoleAkun), role);
 
                                 M_Akun loggedInAkun = new M_Akun
                                 {
+                                    AkunId = id,
                                     Role = roleEnum,
-                                    NamaLengkap = read.GetString(1),
-                                    Username = read.GetString(2),
-                                    Password = read.GetString(3),
+                                    NamaLengkap = read.GetString(2),
+                                    Username = read.GetString(3),
+                                    Password = read.GetString(4),
                                 };
                                 return loggedInAkun;
                             }

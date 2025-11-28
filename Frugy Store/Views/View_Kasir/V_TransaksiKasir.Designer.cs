@@ -42,9 +42,9 @@
             // 
             flowPanelProduk.AutoScroll = true;
             flowPanelProduk.BackColor = Color.Transparent;
-            flowPanelProduk.Location = new Point(380, 281);
+            flowPanelProduk.Location = new Point(382, 289);
             flowPanelProduk.Name = "flowPanelProduk";
-            flowPanelProduk.Size = new Size(1104, 1080);
+            flowPanelProduk.Size = new Size(1104, 728);
             flowPanelProduk.TabIndex = 0;
             // 
             // btnLanjut
@@ -134,6 +134,7 @@
             Controls.Add(flowPanelProduk);
             Margin = new Padding(3, 2, 3, 2);
             Name = "V_TransaksiKasir";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_TransaksiKasir";
             WindowState = FormWindowState.Maximized;
             Load += V_TransaksiKasir_Load;

@@ -59,6 +59,7 @@
             lblNama.Size = new Size(171, 32);
             lblNama.TabIndex = 1;
             lblNama.Text = "Nama Produk";
+            lblNama.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // lblHarga
             // 

@@ -81,7 +81,9 @@
             Controls.Add(tbUsernameLgn);
             Margin = new Padding(3, 2, 3, 2);
             Name = "V_Login";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "V_Login";
+            WindowState = FormWindowState.Maximized;
             Load += V_Login_Load;
             ResumeLayout(false);
             PerformLayout();

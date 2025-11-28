@@ -18,10 +18,19 @@ namespace Frugy_Store
 {
     public partial class V_Login : Form
     {
+
         public V_Login()
         {
             InitializeComponent();
             tbPasswordLgn.UseSystemPasswordChar = true;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
+
+            // 2. Ubah ukuran form mengikuti ukuran area kerja layar pengguna
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+
+            // 3. (Opsional) Kunci supaya user gak bisa ubah ukurannya
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
         }
 
         private void btnLogin_Click(object sender, EventArgs e)
@@ -43,7 +52,6 @@ namespace Frugy_Store
                     Password = password
                 };
 
-                // Assuming AuthController returns a full M_Akun object with Role and AkunId
                 var auth = new AuthController().Login(user);
 
                 if (auth != null)
@@ -52,16 +60,13 @@ namespace Frugy_Store
 
                     AppSession.SetUser(auth);
 
-                    // Check for Admin
                     if (auth.Role == RoleAkun.admin)
                     {
-                        // Removed unnecessary parameter 'produkInterface: null' based on standard practice
                         V_BerandaAdmin admin = new V_BerandaAdmin();
                         admin.FormClosed += (s, args) => this.Close();
                         admin.Show();
                         this.Hide();
                     }
-                    // Check for Kasir using 'else if'
                     else if (auth.Role == RoleAkun.kasir)
                     {
                         V_BerandaKasir kasir = new V_BerandaKasir(auth.AkunId);

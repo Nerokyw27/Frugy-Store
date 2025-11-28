@@ -24,11 +24,17 @@ namespace Frugy_Store.Views.View_Kasir
         {
             InitializeComponent();
             _idKasir = idKasir;
-
+            MessageBox.Show("ID Kasir: " + _idKasir);
             _prodController = new C_Produk();
             _transController = new C_Transaksi();
 
             this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.Manual;
+            this.Location = new Point(0, 0);
+
+            this.Size = Screen.PrimaryScreen.WorkingArea.Size;
+
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
 
             LoadProdukCards("");
         }
