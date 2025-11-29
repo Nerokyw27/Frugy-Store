@@ -41,9 +41,10 @@
             btnTransaksiAdm.BackgroundImageLayout = ImageLayout.Zoom;
             btnTransaksiAdm.FlatAppearance.BorderSize = 0;
             btnTransaksiAdm.FlatStyle = FlatStyle.Flat;
-            btnTransaksiAdm.Location = new Point(529, 125);
+            btnTransaksiAdm.Location = new Point(463, 94);
+            btnTransaksiAdm.Margin = new Padding(3, 2, 3, 2);
             btnTransaksiAdm.Name = "btnTransaksiAdm";
-            btnTransaksiAdm.Size = new Size(400, 750);
+            btnTransaksiAdm.Size = new Size(350, 562);
             btnTransaksiAdm.TabIndex = 0;
             btnTransaksiAdm.UseVisualStyleBackColor = false;
             // 
@@ -54,9 +55,10 @@
             btnLaporanAdm.BackgroundImageLayout = ImageLayout.Zoom;
             btnLaporanAdm.FlatAppearance.BorderSize = 0;
             btnLaporanAdm.FlatStyle = FlatStyle.Flat;
-            btnLaporanAdm.Location = new Point(989, 125);
+            btnLaporanAdm.Location = new Point(865, 94);
+            btnLaporanAdm.Margin = new Padding(3, 2, 3, 2);
             btnLaporanAdm.Name = "btnLaporanAdm";
-            btnLaporanAdm.Size = new Size(400, 750);
+            btnLaporanAdm.Size = new Size(350, 562);
             btnLaporanAdm.TabIndex = 1;
             btnLaporanAdm.UseVisualStyleBackColor = false;
             // 
@@ -67,9 +69,10 @@
             btnProdukAdm.BackgroundImageLayout = ImageLayout.Zoom;
             btnProdukAdm.FlatAppearance.BorderSize = 0;
             btnProdukAdm.FlatStyle = FlatStyle.Flat;
-            btnProdukAdm.Location = new Point(58, 125);
+            btnProdukAdm.Location = new Point(51, 94);
+            btnProdukAdm.Margin = new Padding(3, 2, 3, 2);
             btnProdukAdm.Name = "btnProdukAdm";
-            btnProdukAdm.Size = new Size(400, 750);
+            btnProdukAdm.Size = new Size(350, 562);
             btnProdukAdm.TabIndex = 2;
             btnProdukAdm.UseVisualStyleBackColor = false;
             btnProdukAdm.Click += btnProdukAdm_Click;
@@ -81,22 +84,25 @@
             button2.BackgroundImageLayout = ImageLayout.Zoom;
             button2.FlatAppearance.BorderSize = 0;
             button2.FlatStyle = FlatStyle.Flat;
-            button2.Location = new Point(1436, 118);
+            button2.Location = new Point(1256, 88);
+            button2.Margin = new Padding(3, 2, 3, 2);
             button2.Name = "button2";
-            button2.Size = new Size(408, 760);
+            button2.Size = new Size(357, 570);
             button2.TabIndex = 3;
             button2.UseVisualStyleBackColor = false;
+            button2.Click += button2_Click;
             // 
             // V_BerandaAdmin
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.tampilan_Utama_Admin_kosongan;
-            ClientSize = new Size(1902, 1033);
+            ClientSize = new Size(1664, 775);
             Controls.Add(button2);
             Controls.Add(btnProdukAdm);
             Controls.Add(btnLaporanAdm);
             Controls.Add(btnTransaksiAdm);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "V_BerandaAdmin";
             Text = "V_BerandaAdmin";
             Load += V_BerandaAdmin_Load;

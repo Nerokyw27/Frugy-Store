@@ -35,5 +35,13 @@ namespace Frugy_Store.Views.View_Admin
             tampilanProduk.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            V_Kasir tampilanKasir = new V_Kasir();
+            tampilanKasir.FormClosed += (s, args) => this.Close();
+            tampilanKasir.Show();
+            this.Hide();
+        }
     }
 }

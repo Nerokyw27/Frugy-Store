@@ -15,12 +15,15 @@ namespace Frugy_Store.Views.View_Admin
     public partial class V_Kasir : Form
     {
         private C_Kasir cKasir = new C_Kasir();
+        private AuthController _akunController;
         public V_Kasir()
         {
             InitializeComponent();
-
+            LoadKasirPanels();
+            _akunController = new AuthController();
+            this.WindowState = FormWindowState.Maximized;
             // Event tanpa lambda dan tanpa double click
-            PanelTambahKasir.Click += PanelTambahKasir_Click;
+            //PanelTambahKasir.Click += PanelTambahKasir_Click;
         }
 
         // Event klik tombol
@@ -28,7 +31,8 @@ namespace Frugy_Store.Views.View_Admin
         {
 
             V_TambahKasir formTambah = new V_TambahKasir();
-            formTambah.Show();
+            formTambah.ShowDialog();
+            LoadKasirPanels();
         }
 
         private void LoadKasirPanels()
@@ -64,7 +68,7 @@ namespace Frugy_Store.Views.View_Admin
                 lblUser.AutoSize = true;
                 lblUser.Cursor = Cursors.Hand;
 
-                // Add ke panel
+                //Add ke panel
                 panelKasir.Controls.Add(lblNama);
                 panelKasir.Controls.Add(lblUser);
 
@@ -109,6 +113,32 @@ namespace Frugy_Store.Views.View_Admin
             LoadKasirPanels();
         }
 
+        private void LBKasir1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void LBStatus1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnTambahKasir_Click(object sender, EventArgs e)
+        {
+            V_TambahKasir formTambah = new V_TambahKasir();
+            formTambah.ShowDialog();
+            LoadKasirPanels();
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 
 }

@@ -21,5 +21,10 @@ namespace Frugy_Store.Model
         public DateTime Kadaluarsa { get; set; }
         public string NamaSupplier { get; set; }
         public int IdJenisProduk { get; set; }
+
+        public override string ToString()
+        {
+            return this.NamaProduk;
+        }
     }
 }
