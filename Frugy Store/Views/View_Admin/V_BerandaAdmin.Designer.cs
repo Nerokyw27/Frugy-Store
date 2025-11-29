@@ -72,6 +72,7 @@
             btnProdukAdm.Size = new Size(400, 750);
             btnProdukAdm.TabIndex = 2;
             btnProdukAdm.UseVisualStyleBackColor = false;
+            btnProdukAdm.Click += btnProdukAdm_Click;
             // 
             // button2
             // 

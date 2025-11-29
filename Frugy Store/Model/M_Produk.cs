@@ -17,6 +17,9 @@ namespace Frugy_Store.Model
         public string Satuan { get; set; }
         public string Lokasi { get; set; }
         public string Deskripsi { get; set; }
+        public DateTime TanggalMasuk { get; set; }
+        public DateTime Kadaluarsa { get; set; }
+        public string NamaSupplier { get; set; }
         public int IdJenisProduk { get; set; }
     }
 }

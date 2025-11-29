@@ -117,6 +117,8 @@
             panel8.BackColor = Color.Transparent;
             panel8.BackgroundImage = Properties.Resources.Rectangle_16_2x;
             panel8.BackgroundImageLayout = ImageLayout.Stretch;
+            panel8.Controls.Add(label5);
+            panel8.Controls.Add(label4);
             panel8.Controls.Add(BtnSimpanKasir);
             panel8.Controls.Add(LBMulaiBekerja);
             panel8.Controls.Add(LBStatus);
@@ -190,7 +192,6 @@
             panel9.BackgroundImage = Properties.Resources.Rectangle_73;
             panel9.BackgroundImageLayout = ImageLayout.Zoom;
             panel9.Controls.Add(textBox2);
-            panel9.Controls.Add(label4);
             panel9.Location = new Point(398, 532);
             panel9.Name = "panel9";
             panel9.Size = new Size(629, 96);
@@ -209,7 +210,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(-84, -26);
+            label4.Location = new Point(411, 506);
             label4.Name = "label4";
             label4.Size = new Size(214, 38);
             label4.TabIndex = 9;
@@ -238,7 +239,6 @@
             // 
             panel11.BackgroundImage = Properties.Resources.Rectangle_73;
             panel11.BackgroundImageLayout = ImageLayout.Zoom;
-            panel11.Controls.Add(label5);
             panel11.Controls.Add(textBox4);
             panel11.Location = new Point(398, 294);
             panel11.Name = "panel11";
@@ -249,7 +249,7 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(11, 84);
+            label5.Location = new Point(401, 378);
             label5.Name = "label5";
             label5.Size = new Size(102, 38);
             label5.TabIndex = 8;

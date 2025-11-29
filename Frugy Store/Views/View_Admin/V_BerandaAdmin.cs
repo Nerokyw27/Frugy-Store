@@ -1,4 +1,5 @@
 ﻿using Frugy_Store.Interface;
+using Frugy_Store.Views.View_Kasir;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,12 +20,20 @@ namespace Frugy_Store.Views.View_Admin
         {
             InitializeComponent();
             //C_Produk = produkInterface;
-            
+
         }
 
         private void V_BerandaAdmin_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnProdukAdm_Click(object sender, EventArgs e)
+        {
+            V_TampilanProduk tampilanProduk = new V_TampilanProduk();
+            tampilanProduk.FormClosed += (s, args) => this.Close();
+            tampilanProduk.Show();
+            this.Hide();
         }
     }
 }

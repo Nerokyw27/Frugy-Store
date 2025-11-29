@@ -203,6 +203,16 @@ namespace Frugy_Store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap tambah_produk {
+            get {
+                object obj = ResourceManager.GetObject("tambah produk", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap tampilan_Utama_Admin_kosongan {
             get {
                 object obj = ResourceManager.GetObject("tampilan Utama Admin kosongan", resourceCulture);

@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Frugy_Store.Controller
 {
@@ -29,28 +30,48 @@ namespace Frugy_Store.Controller
                 {
                     conn.Open();
                     string query = @"
-                                    INSERT INTO produk (nama_produk, harga, stok, satuan, lokasi, deskripsi, id_jenis_produk, akun_id, image)
-                                    VALUES (@nama, @harga, @stok, @satuan, @lokasi, @deskripsi, @idJenis, @akunId, @image)";
+                        INSERT INTO produk(
+                            nama_produk,
+                            tanggal_masuk,
+                            kadaluarsa,
+                            stok,
+                            harga,
+                            satuan,
+                            id_jenis_produk,
+                            gambar,
+                            status
+                        )
+                        VALUES(
+                            @nama_produk,
+                            @tanggal_masuk,
+                            @kadaluarsa,
+                            @stok,
+                            @harga,
+                            @satuan,
+                            @id_jenis_produk,
+                            @image,
+                            @status
+                        )";
 
-
-                    using (NpgsqlCommand cmd = conn.CreateCommand())
+                    using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
-                        cmd.Parameters.AddWithValue("@image", produk.Image);
-                        cmd.Parameters.AddWithValue("@namaProduk", produk.NamaProduk);
-                        cmd.Parameters.AddWithValue("@harga", produk.Harga);
+                        cmd.Parameters.AddWithValue("@nama_produk", produk.NamaProduk ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@tanggal_masuk", produk.TanggalMasuk);
+                        cmd.Parameters.AddWithValue("@kadaluarsa", produk.Kadaluarsa);
                         cmd.Parameters.AddWithValue("@stok", produk.Stok);
-                        cmd.Parameters.AddWithValue("@akunId", produk.AkunId);
-                        cmd.Parameters.AddWithValue("@satuan", produk.Satuan ?? "");
-                        cmd.Parameters.AddWithValue("@lokasi", produk.Lokasi ?? "");
-                        cmd.Parameters.AddWithValue("@deskripsi", produk.Deskripsi ?? "");
-                        cmd.Parameters.AddWithValue("@idJenis", produk.IdJenisProduk);
+                        cmd.Parameters.AddWithValue("@harga", produk.Harga);
+                        cmd.Parameters.AddWithValue("@satuan", produk.Satuan ?? (object)DBNull.Value);
+                        cmd.Parameters.AddWithValue("@id_jenis_produk", produk.IdJenisProduk);
 
                         if (produk.Image != null && produk.Image.Length > 0)
                             cmd.Parameters.AddWithValue("@image", produk.Image);
                         else
                             cmd.Parameters.AddWithValue("@image", DBNull.Value);
 
-                        var result = cmd.ExecuteNonQuery();
+                        // default aktif
+                        cmd.Parameters.AddWithValue("@status", "1");
+
+                        cmd.ExecuteNonQuery();
                     }
                 }
             }
@@ -70,9 +91,10 @@ namespace Frugy_Store.Controller
                 {
                     conn.Open();
                     string query = @"
-                                    SELECT id_produk, image, nama_produk, harga, stok, akun_id
+                                    SELECT * 
                                     FROM produk
-                                    WHERE akun_id = @akunId";
+                                    WHERE akun_id = @akunId AND status = '1'
+                                    ORDER BY id_produk ASC";
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@akunId", userId);
@@ -80,15 +102,7 @@ namespace Frugy_Store.Controller
                         {
                             while (reader.Read())
                             {
-                                M_Produk produk = new M_Produk
-                                {
-                                    IdProduk = reader.GetInt32(0),
-                                    Image = (byte[])reader["image"],
-                                    NamaProduk = reader.GetString(2),
-                                    Harga = reader.GetInt32(3),
-                                    Stok = reader.GetInt32(4),
-                                    AkunId = reader.GetInt32(5),
-                                };
+                                M_Produk produk = MapToModel(reader);
                                 produkList.Add(produk);
                             }
                         }
@@ -101,6 +115,7 @@ namespace Frugy_Store.Controller
             }
             return produkList;
         }
+
         public List<M_Produk> GetProduk()
         {
             List<M_Produk> produkList = new List<M_Produk>();
@@ -120,15 +135,6 @@ namespace Frugy_Store.Controller
                             {
                                 M_Produk produk = MapToModel(reader);
                                 produkList.Add(produk);
-                                //M_Produk produk = new M_Produk
-                                //{
-                                //    ProdukId = reader.GetInt32(0),
-                                //    Image = (byte[])reader["image"],
-                                //    NamaProduk = reader.GetString(2),
-                                //    Harga = reader.GetInt32(3),
-                                //    Stok = reader.GetInt32(4),
-                                //};
-                                //produkList.Add(produk);
                             }
                         }
                     }
@@ -151,9 +157,6 @@ namespace Frugy_Store.Controller
                     // Soft Delete (Recommended) - Change status to '0'
                     string query = "UPDATE produk SET status = '0' WHERE id_produk = @id";
 
-                    // Or Hard Delete (Permanent)
-                    // string query = "DELETE FROM produk WHERE produk_id = @id";
-
                     using (NpgsqlCommand cmd = new NpgsqlCommand(query, conn))
                     {
                         cmd.Parameters.AddWithValue("@id", idProduk);
@@ -174,8 +177,8 @@ namespace Frugy_Store.Controller
             // Gunakan nama kolom string["nama_kolom"] agar lebih aman daripada index angka
             p.IdProduk = Convert.ToInt32(reader["id_produk"]);
             p.NamaProduk = reader["nama_produk"].ToString();
-            p.Harga = Convert.ToInt32(reader["harga"]);
-            p.Stok = Convert.ToInt32(reader["stok"]);
+            p.Harga = reader["harga"] != DBNull.Value ? Convert.ToInt32(reader["harga"]) : 0;
+            p.Stok = reader["stok"] != DBNull.Value ? Convert.ToInt32(reader["stok"]) : 0;
             p.AkunId = reader["akun_id"] != DBNull.Value ? Convert.ToInt32(reader["akun_id"]) : 0;
 
             // Handle Kolom Tambahan
@@ -188,11 +191,27 @@ namespace Frugy_Store.Controller
             if (CheckColumn(reader, "deskripsi"))
                 p.Deskripsi = reader["deskripsi"] != DBNull.Value ? reader["deskripsi"].ToString() : "";
 
+            if (CheckColumn(reader, "tanggal_masuk") && reader["tanggal_masuk"] != DBNull.Value)
+                p.TanggalMasuk = Convert.ToDateTime(reader["tanggal_masuk"]);
+
+            if (CheckColumn(reader, "kadaluarsa") && reader["kadaluarsa"] != DBNull.Value)
+                p.Kadaluarsa = Convert.ToDateTime(reader["kadaluarsa"]);
+
+            // id jenis produk handling (cek beberapa nama kolom umum)
             if (CheckColumn(reader, "id_jenis_produk") && reader["id_jenis_produk"] != DBNull.Value)
                 p.IdJenisProduk = Convert.ToInt32(reader["id_jenis_produk"]);
+            else if (CheckColumn(reader, "idjenisproduk") && reader["idjenisproduk"] != DBNull.Value)
+                p.IdJenisProduk = Convert.ToInt32(reader["idjenisproduk"]);
 
-            // Handle Image Null Check (PENTING BIAR GAK CRASH)
-            if (CheckColumn(reader, "image") && reader["image"] != DBNull.Value)
+            if (CheckColumn(reader, "nama_supplier"))
+                p.NamaSupplier = reader["nama_supplier"] != DBNull.Value ? reader["nama_supplier"].ToString() : "";
+
+            // Handle Image/Gambar Null Check
+            if (CheckColumn(reader, "gambar") && reader["gambar"] != DBNull.Value)
+            {
+                p.Image = (byte[])reader["gambar"];
+            }
+            else if (CheckColumn(reader, "image") && reader["image"] != DBNull.Value)
             {
                 p.Image = (byte[])reader["image"];
             }
