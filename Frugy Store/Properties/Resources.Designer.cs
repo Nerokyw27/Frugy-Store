@@ -63,6 +63,16 @@ namespace Frugy_Store.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Edit_Akun_Kasir {
+            get {
+                object obj = ResourceManager.GetObject("Edit Akun Kasir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap edit_produk {
             get {
                 object obj = ResourceManager.GetObject("edit produk", resourceCulture);
@@ -136,6 +146,16 @@ namespace Frugy_Store.Properties {
         internal static System.Drawing.Bitmap ManageAkunBtn {
             get {
                 object obj = ResourceManager.GetObject("ManageAkunBtn", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap managemen_akun_kasir {
+            get {
+                object obj = ResourceManager.GetObject("managemen akun kasir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

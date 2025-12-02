@@ -192,12 +192,14 @@
             // 
             // btnKembaliEP
             // 
-            btnKembaliEP.Location = new Point(377, 25);
+            btnKembaliEP.BackColor = Color.YellowGreen;
+            btnKembaliEP.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnKembaliEP.Location = new Point(367, 20);
             btnKembaliEP.Name = "btnKembaliEP";
-            btnKembaliEP.Size = new Size(126, 34);
+            btnKembaliEP.Size = new Size(165, 44);
             btnKembaliEP.TabIndex = 15;
             btnKembaliEP.Text = "Kembali";
-            btnKembaliEP.UseVisualStyleBackColor = true;
+            btnKembaliEP.UseVisualStyleBackColor = false;
             // 
             // V_EditProduk
             // 
