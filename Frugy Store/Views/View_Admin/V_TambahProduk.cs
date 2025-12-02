@@ -41,9 +41,8 @@ namespace Frugy_Store.Views.View_Admin
             {
                 // Collect data from input fields
                 string namaProduk = tbNamaBuahSayur.Text;
-                DateTime tglMasuk = DateTime.Parse(tbTglMasuk.Text);
-                DateTime kadaluarsa = DateTime.Parse(tbKadaluarsa.Text);
-                int stok = int.Parse(tbStokBrg.Text);
+                string lokasi = tbLokasi.Text;
+                string deskripsi = tbDeskripsi.Text;
                 int harga = int.Parse(tbHarga.Text);
                 string satuan = tbSatuan.Text;
 
@@ -62,9 +61,8 @@ namespace Frugy_Store.Views.View_Admin
                 M_Produk product = new M_Produk
                 {
                     NamaProduk = namaProduk,
-                    TanggalMasuk = tglMasuk,
-                    Kadaluarsa = kadaluarsa,
-                    Stok = stok,
+                    Lokasi = lokasi,
+                    Deskripsi = deskripsi,
                     Harga = harga,
                     Satuan = satuan,
                     Image = imageBytes,
@@ -85,6 +83,16 @@ namespace Frugy_Store.Views.View_Admin
                 MessageBox.Show($"Error menyimpan produk: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            var result = MessageBox.Show("Apakah Anda yakin ingin membatalkan?", "Konfirmasi", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                this.DialogResult = DialogResult.Cancel;
+                this.Close();
+            }
+        }
 
         private int idJenisProduk;
         private void cbSayur_CheckedChanged(object sender, EventArgs e)
@@ -103,6 +111,19 @@ namespace Frugy_Store.Views.View_Admin
                 idJenisProduk = 2;
                 cbSayur.Checked = false;
             }
+        }
+
+        private void tbNamaBuahSayur_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            V_TampilanProduk tampilanProduk = new V_TampilanProduk();
+            tampilanProduk.FormClosed += (s, args) => this.Close();
+            tampilanProduk.Show();
+            this.Hide();
         }
     }
 }

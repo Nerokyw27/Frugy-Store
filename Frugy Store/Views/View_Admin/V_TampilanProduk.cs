@@ -50,7 +50,7 @@ namespace Frugy_Store.Views.View_Admin
                     // panel container
                     Panel panel = new Panel
                     {
-                        Size = new Size(1418, 149),
+                        Size = new Size(1739, 198),
                         BorderStyle = BorderStyle.FixedSingle,
                         Margin = new Padding(3),
                         Tag = produk.IdProduk
@@ -60,7 +60,7 @@ namespace Frugy_Store.Views.View_Admin
                     PictureBox pictureBox = new PictureBox
                     {
                         Size = new Size(143, 118),
-                        Location = new Point(22, 18),
+                        Location = new Point(47, 33),
                         SizeMode = PictureBoxSizeMode.StretchImage,
                         BackColor = Color.WhiteSmoke
                     };
@@ -82,23 +82,23 @@ namespace Frugy_Store.Views.View_Admin
                     {
                         Text = "Stok :",
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(183, 83),
+                        Location = new Point(249, 84),
                         AutoSize = true
                     };
 
-                    Label lblTglHeading = new Label
+                    Label lblLokasiHeading = new Label
                     {
-                        Text = "Tanggal Masuk",
+                        Text = "Lokasi :",
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(439, 18),
+                        Location = new Point(674, 33),
                         AutoSize = true
                     };
 
-                    Label lblKdlHeading = new Label
+                    Label lblDeskripsiHeading = new Label
                     {
-                        Text = "Kadaluarsa",
+                        Text = "Deskripsi :",
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(728, 18),
+                        Location = new Point(249, 133),
                         AutoSize = true
                     };
 
@@ -106,7 +106,7 @@ namespace Frugy_Store.Views.View_Admin
                     {
                         Text = "Harga",
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(985, 18),
+                        Location = new Point(501, 33),
                         AutoSize = true
                     };
 
@@ -115,7 +115,7 @@ namespace Frugy_Store.Views.View_Admin
                     {
                         Text = produk.NamaProduk ?? "-",
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(183, 18),
+                        Location = new Point(249, 33),
                         AutoSize = true
                     };
 
@@ -123,23 +123,23 @@ namespace Frugy_Store.Views.View_Admin
                     {
                         Text = produk.Stok.ToString(),
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(254, 83),
+                        Location = new Point(328, 84),
                         AutoSize = true
                     };
 
-                    Label lblTglValue = new Label
+                    Label lblLokasiValue = new Label
                     {
-                        Text = produk.TanggalMasuk != default ? produk.TanggalMasuk.ToString("yyyy-MM-dd") : "-",
+                        Text = produk.Lokasi ?? "-",
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(439, 83),
+                        Location = new Point(674, 84),
                         AutoSize = true
                     };
 
-                    Label lblKdlValue = new Label
+                    Label lblDeskripsiValue = new Label
                     {
-                        Text = produk.Kadaluarsa != default ? produk.Kadaluarsa.ToString("yyyy-MM-dd") : "-",
+                        Text = produk.Deskripsi ?? "-",
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(728, 83),
+                        Location = new Point(381, 133),
                         AutoSize = true
                     };
 
@@ -147,7 +147,7 @@ namespace Frugy_Store.Views.View_Admin
                     {
                         Text = produk.Harga.ToString("N0"),
                         Font = new Font("Poppins", 13.8F, FontStyle.Regular),
-                        Location = new Point(985, 83),
+                        Location = new Point(501, 84),
                         AutoSize = true
                     };
 
@@ -155,19 +155,44 @@ namespace Frugy_Store.Views.View_Admin
                     Button btnEdit = new Button
                     {
                         Text = "Edit",
-                        Location = new Point(1227, 64),
+                        Location = new Point(1305, 78),
                         Size = new Size(71, 34),
                         Tag = produk.IdProduk
                     };
                     btnEdit.Click += (s, e) =>
                     {
-                        MessageBox.Show("Implement edit form untuk mengubah produk.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        try
+                        {
+                            this.Hide();
+
+                            using (var edit = new V_EditProduk(produk.IdProduk))
+                            {
+                                edit.FormClosed += (se, ea) =>
+                                {
+                                    try
+                                    {
+                                        if (edit.DialogResult == DialogResult.OK)
+                                            LoadProduk();
+
+                                        this.Show();
+                                    }
+                                    catch { }
+                                };
+
+                                edit.ShowDialog();
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Gagal membuka edit form: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            try { this.Show(); } catch { }
+                        }
                     };
 
                     Button btnDelete = new Button
                     {
                         Text = "Delete",
-                        Location = new Point(1319, 64),
+                        Location = new Point(1405, 78),
                         Size = new Size(71, 34),
                         Tag = produk.IdProduk
                     };
@@ -187,14 +212,14 @@ namespace Frugy_Store.Views.View_Admin
                     panel.Controls.Add(lblNamaValue);
                     panel.Controls.Add(lblStokHeading);
                     panel.Controls.Add(lblStokValue);
-                    panel.Controls.Add(lblTglHeading);
-                    panel.Controls.Add(lblTglValue);
-                    panel.Controls.Add(lblKdlHeading);
-                    panel.Controls.Add(lblKdlValue);
                     panel.Controls.Add(lblHargaHeading);
                     panel.Controls.Add(lblHargaValue);
                     panel.Controls.Add(btnEdit);
                     panel.Controls.Add(btnDelete);
+                    panel.Controls.Add(lblLokasiHeading);
+                    panel.Controls.Add(lblLokasiValue);
+                    panel.Controls.Add(lblDeskripsiHeading);
+                    panel.Controls.Add(lblDeskripsiValue);
 
                     flowLayoutPanel1.Controls.Add(panel);
                 }

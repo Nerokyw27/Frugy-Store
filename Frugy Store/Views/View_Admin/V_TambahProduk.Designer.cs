@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            btnCancel = new Button();
+            tbDeskripsi = new TextBox();
+            lblDeskripsi = new Label();
+            tbLokasi = new TextBox();
+            lblLokasi = new Label();
             cbSayur = new CheckBox();
             cbBuah = new CheckBox();
             tbSatuan = new TextBox();
             Satuan = new Label();
             btnSave = new Button();
-            tbStokBrg = new TextBox();
-            StokBrg = new Label();
             btnUpload = new Button();
             pictureBox1 = new PictureBox();
             UploadFoto = new Label();
             tbHarga = new TextBox();
-            tbKadaluarsa = new TextBox();
-            tbTglMasuk = new TextBox();
             tbNamaBuahSayur = new TextBox();
             Harga = new Label();
-            Kadaluarsa = new Label();
-            tglMasuk = new Label();
             namaBuahSayur = new Label();
+            btnBack = new Button();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -56,28 +56,73 @@
             panel1.BackColor = Color.Transparent;
             panel1.BackgroundImage = Properties.Resources.Rectangle_16_2x;
             panel1.BackgroundImageLayout = ImageLayout.Zoom;
+            panel1.Controls.Add(btnCancel);
+            panel1.Controls.Add(tbDeskripsi);
+            panel1.Controls.Add(lblDeskripsi);
+            panel1.Controls.Add(tbLokasi);
+            panel1.Controls.Add(lblLokasi);
             panel1.Controls.Add(cbSayur);
             panel1.Controls.Add(cbBuah);
             panel1.Controls.Add(tbSatuan);
             panel1.Controls.Add(Satuan);
             panel1.Controls.Add(btnSave);
-            panel1.Controls.Add(tbStokBrg);
-            panel1.Controls.Add(StokBrg);
             panel1.Controls.Add(btnUpload);
             panel1.Controls.Add(pictureBox1);
             panel1.Controls.Add(UploadFoto);
             panel1.Controls.Add(tbHarga);
-            panel1.Controls.Add(tbKadaluarsa);
-            panel1.Controls.Add(tbTglMasuk);
             panel1.Controls.Add(tbNamaBuahSayur);
             panel1.Controls.Add(Harga);
-            panel1.Controls.Add(Kadaluarsa);
-            panel1.Controls.Add(tglMasuk);
             panel1.Controls.Add(namaBuahSayur);
             panel1.Location = new Point(419, 84);
             panel1.Name = "panel1";
             panel1.Size = new Size(1231, 937);
             panel1.TabIndex = 0;
+            // 
+            // btnCancel
+            // 
+            btnCancel.Location = new Point(922, 788);
+            btnCancel.Name = "btnCancel";
+            btnCancel.Size = new Size(105, 44);
+            btnCancel.TabIndex = 22;
+            btnCancel.Text = "Batal";
+            btnCancel.UseVisualStyleBackColor = true;
+            btnCancel.Click += btnCancel_Click;
+            // 
+            // tbDeskripsi
+            // 
+            tbDeskripsi.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbDeskripsi.Location = new Point(257, 641);
+            tbDeskripsi.Name = "tbDeskripsi";
+            tbDeskripsi.Size = new Size(647, 42);
+            tbDeskripsi.TabIndex = 21;
+            // 
+            // lblDeskripsi
+            // 
+            lblDeskripsi.AutoSize = true;
+            lblDeskripsi.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblDeskripsi.Location = new Point(257, 585);
+            lblDeskripsi.Name = "lblDeskripsi";
+            lblDeskripsi.Size = new Size(157, 53);
+            lblDeskripsi.TabIndex = 20;
+            lblDeskripsi.Text = "Deskripsi";
+            // 
+            // tbLokasi
+            // 
+            tbLokasi.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbLokasi.Location = new Point(257, 523);
+            tbLokasi.Name = "tbLokasi";
+            tbLokasi.Size = new Size(226, 42);
+            tbLokasi.TabIndex = 19;
+            // 
+            // lblLokasi
+            // 
+            lblLokasi.AutoSize = true;
+            lblLokasi.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblLokasi.Location = new Point(257, 468);
+            lblLokasi.Name = "lblLokasi";
+            lblLokasi.Size = new Size(113, 53);
+            lblLokasi.TabIndex = 18;
+            lblLokasi.Text = "Lokasi";
             // 
             // cbSayur
             // 
@@ -106,7 +151,7 @@
             // tbSatuan
             // 
             tbSatuan.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbSatuan.Location = new Point(257, 520);
+            tbSatuan.Location = new Point(257, 286);
             tbSatuan.Name = "tbSatuan";
             tbSatuan.Size = new Size(226, 42);
             tbSatuan.TabIndex = 15;
@@ -115,7 +160,7 @@
             // 
             Satuan.AutoSize = true;
             Satuan.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Satuan.Location = new Point(248, 464);
+            Satuan.Location = new Point(257, 349);
             Satuan.Name = "Satuan";
             Satuan.Size = new Size(129, 53);
             Satuan.TabIndex = 14;
@@ -123,35 +168,17 @@
             // 
             // btnSave
             // 
-            btnSave.Location = new Point(967, 788);
+            btnSave.Location = new Point(1045, 788);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(183, 44);
+            btnSave.Size = new Size(105, 44);
             btnSave.TabIndex = 13;
             btnSave.Text = "Simpan";
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += btnSave_Click;
             // 
-            // tbStokBrg
-            // 
-            tbStokBrg.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbStokBrg.Location = new Point(257, 403);
-            tbStokBrg.Name = "tbStokBrg";
-            tbStokBrg.Size = new Size(226, 42);
-            tbStokBrg.TabIndex = 12;
-            // 
-            // StokBrg
-            // 
-            StokBrg.AutoSize = true;
-            StokBrg.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            StokBrg.Location = new Point(248, 347);
-            StokBrg.Name = "StokBrg";
-            StokBrg.Size = new Size(85, 53);
-            StokBrg.TabIndex = 11;
-            StokBrg.Text = "Stok";
-            // 
             // btnUpload
             // 
-            btnUpload.Location = new Point(700, 759);
+            btnUpload.Location = new Point(671, 528);
             btnUpload.Name = "btnUpload";
             btnUpload.Size = new Size(182, 40);
             btnUpload.TabIndex = 10;
@@ -162,7 +189,7 @@
             // pictureBox1
             // 
             pictureBox1.BackgroundImageLayout = ImageLayout.Zoom;
-            pictureBox1.Location = new Point(678, 537);
+            pictureBox1.Location = new Point(653, 298);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(216, 198);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
@@ -173,7 +200,7 @@
             // 
             UploadFoto.AutoSize = true;
             UploadFoto.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            UploadFoto.Location = new Point(687, 464);
+            UploadFoto.Location = new Point(663, 230);
             UploadFoto.Name = "UploadFoto";
             UploadFoto.Size = new Size(200, 53);
             UploadFoto.TabIndex = 8;
@@ -182,26 +209,10 @@
             // tbHarga
             // 
             tbHarga.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbHarga.Location = new Point(678, 403);
+            tbHarga.Location = new Point(257, 405);
             tbHarga.Name = "tbHarga";
             tbHarga.Size = new Size(226, 42);
             tbHarga.TabIndex = 7;
-            // 
-            // tbKadaluarsa
-            // 
-            tbKadaluarsa.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbKadaluarsa.Location = new Point(678, 296);
-            tbKadaluarsa.Name = "tbKadaluarsa";
-            tbKadaluarsa.Size = new Size(226, 42);
-            tbKadaluarsa.TabIndex = 6;
-            // 
-            // tbTglMasuk
-            // 
-            tbTglMasuk.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbTglMasuk.Location = new Point(257, 296);
-            tbTglMasuk.Name = "tbTglMasuk";
-            tbTglMasuk.Size = new Size(226, 42);
-            tbTglMasuk.TabIndex = 5;
             // 
             // tbNamaBuahSayur
             // 
@@ -211,36 +222,17 @@
             tbNamaBuahSayur.Name = "tbNamaBuahSayur";
             tbNamaBuahSayur.Size = new Size(647, 42);
             tbNamaBuahSayur.TabIndex = 4;
+            tbNamaBuahSayur.TextChanged += tbNamaBuahSayur_TextChanged;
             // 
             // Harga
             // 
             Harga.AutoSize = true;
             Harga.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Harga.Location = new Point(729, 347);
+            Harga.Location = new Point(257, 230);
             Harga.Name = "Harga";
             Harga.Size = new Size(116, 53);
             Harga.TabIndex = 3;
             Harga.Text = "Harga";
-            // 
-            // Kadaluarsa
-            // 
-            Kadaluarsa.AutoSize = true;
-            Kadaluarsa.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            Kadaluarsa.Location = new Point(687, 231);
-            Kadaluarsa.Name = "Kadaluarsa";
-            Kadaluarsa.Size = new Size(195, 53);
-            Kadaluarsa.TabIndex = 2;
-            Kadaluarsa.Text = "Kadaluarsa";
-            // 
-            // tglMasuk
-            // 
-            tglMasuk.AutoSize = true;
-            tglMasuk.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tglMasuk.Location = new Point(248, 231);
-            tglMasuk.Name = "tglMasuk";
-            tglMasuk.Size = new Size(248, 53);
-            tglMasuk.TabIndex = 1;
-            tglMasuk.Text = "Tanggal Masuk";
             // 
             // namaBuahSayur
             // 
@@ -252,6 +244,18 @@
             namaBuahSayur.TabIndex = 0;
             namaBuahSayur.Text = "Nama Buah/Sayur";
             // 
+            // btnBack
+            // 
+            btnBack.BackColor = Color.YellowGreen;
+            btnBack.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnBack.Location = new Point(367, 20);
+            btnBack.Name = "btnBack";
+            btnBack.Size = new Size(165, 44);
+            btnBack.TabIndex = 23;
+            btnBack.Text = "Kembali";
+            btnBack.UseVisualStyleBackColor = false;
+            btnBack.Click += btnBack_Click;
+            // 
             // V_TambahProduk
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -259,6 +263,7 @@
             BackgroundImage = Properties.Resources.tambah_produk;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1902, 1033);
+            Controls.Add(btnBack);
             Controls.Add(panel1);
             DoubleBuffered = true;
             Name = "V_TambahProduk";
@@ -272,23 +277,23 @@
         #endregion
 
         private Panel panel1;
-        private Label tglMasuk;
         private Label namaBuahSayur;
         private Label UploadFoto;
         private TextBox tbHarga;
-        private TextBox tbKadaluarsa;
-        private TextBox tbTglMasuk;
         private TextBox tbNamaBuahSayur;
         private Label Harga;
-        private Label Kadaluarsa;
         private Button btnUpload;
         private PictureBox pictureBox1;
-        private Label StokBrg;
         private Button btnSave;
-        private TextBox tbStokBrg;
         private TextBox tbSatuan;
         private Label Satuan;
         private CheckBox cbBuah;
         private CheckBox cbSayur;
+        private TextBox tbLokasi;
+        private Label lblLokasi;
+        private Button btnCancel;
+        private TextBox tbDeskripsi;
+        private Label lblDeskripsi;
+        private Button btnBack;
     }
 }
