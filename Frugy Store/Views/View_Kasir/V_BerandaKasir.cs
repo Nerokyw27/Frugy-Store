@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Frugy_Store.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,7 +30,7 @@ namespace Frugy_Store.Views.View_Kasir
 
         private void btnLaporanKsr_Click(object sender, EventArgs e)
         {
-            V_LaporanKasir laporanKasir = new V_LaporanKasir();
+            V_LaporanKasir laporanKasir = new V_LaporanKasir(_idKasir, "saya");
             laporanKasir.FormClosed += (s, args) => this.Close();
             laporanKasir.Show();
             this.Hide();

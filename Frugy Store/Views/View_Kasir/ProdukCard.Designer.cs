@@ -41,10 +41,10 @@
             // 
             // pbGambar
             // 
-            pbGambar.BackgroundImage = (Image)resources.GetObject("pbGambar.BackgroundImage");
-            pbGambar.Location = new Point(18, 22);
+            pbGambar.BackColor = Color.PaleGreen;
+            pbGambar.Location = new Point(32, 33);
             pbGambar.Name = "pbGambar";
-            pbGambar.Size = new Size(237, 184);
+            pbGambar.Size = new Size(209, 173);
             pbGambar.TabIndex = 0;
             pbGambar.TabStop = false;
             // 

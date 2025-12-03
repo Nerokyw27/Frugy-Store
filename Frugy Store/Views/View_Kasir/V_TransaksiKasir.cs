@@ -171,7 +171,8 @@ namespace Frugy_Store.Views.View_Kasir
                 {
                     AkunId = _idKasir,
                     MetodePembayaran = formBayar.MetodePembayaran,
-                    ListDetail = listBelanja
+                    ListDetail = listBelanja,
+                    TotalBayar = total
                 };
 
                 try

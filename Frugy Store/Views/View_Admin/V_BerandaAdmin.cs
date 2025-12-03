@@ -54,7 +54,10 @@ namespace Frugy_Store.Views.View_Admin
 
         private void btnLaporanAdm_Click(object sender, EventArgs e)
         {
-
+            V_LaporanAdm laporanAdm = new V_LaporanAdm();
+            laporanAdm.FormClosed += (s, args) => this.Close();
+            laporanAdm.Show();
+            this.Hide();
         }
     }
 }

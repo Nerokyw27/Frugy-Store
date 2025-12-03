@@ -13,6 +13,8 @@ namespace Frugy_Store.Model
         public DateTime TanggalTransaksi { get; set; }
         public int AkunId { get; set; }
         public List<M_DetailTransaksi> ListDetail { get; set; }
+        public int TotalBayar { get; set; }
+
 
         public M_Transaksi()
         {

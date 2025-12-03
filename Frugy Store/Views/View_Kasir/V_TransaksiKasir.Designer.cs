@@ -36,7 +36,6 @@
             lblTotalBayar = new Label();
             lblbiasa = new Label();
             txtCari = new TextBox();
-            btnLaporan = new Button();
             SuspendLayout();
             // 
             // flowPanelProduk
@@ -121,21 +120,12 @@
             txtCari.Size = new Size(1022, 43);
             txtCari.TabIndex = 7;
             // 
-            // btnLaporan
-            // 
-            btnLaporan.Location = new Point(38, 289);
-            btnLaporan.Name = "btnLaporan";
-            btnLaporan.Size = new Size(249, 56);
-            btnLaporan.TabIndex = 8;
-            btnLaporan.UseVisualStyleBackColor = true;
-            // 
             // V_TransaksiKasir
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1904, 1041);
-            Controls.Add(btnLaporan);
             Controls.Add(txtCari);
             Controls.Add(lblbiasa);
             Controls.Add(lblTotalBayar);
@@ -162,6 +152,5 @@
         private Label lblTotalBayar;
         private Label lblbiasa;
         private TextBox txtCari;
-        private Button btnLaporan;
     }
 }

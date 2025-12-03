@@ -31,12 +31,15 @@ namespace Frugy_Store.Controller
                     try
                     {
                         // 1. Header
-                        string qHead = "INSERT INTO transaksi (akun_id, metode_pembayaran) VALUES (@akun, @metode) RETURNING id_transaksi";
+                        string qHead = @"INSERT INTO transaksi (akun_id, metode_pembayaran, total_bayar, tanggal_transaksi) 
+                       VALUES (@akun, @metode, @total, CURRENT_TIMESTAMP) 
+                       RETURNING id_transaksi";
                         int idTransBaru;
                         using (var cmd = new NpgsqlCommand(qHead, conn, trans))
                         {
                             cmd.Parameters.AddWithValue("@akun", transaksi.AkunId); // Ambil dari object
                             cmd.Parameters.AddWithValue("@metode", transaksi.MetodePembayaran); // Ambil dari object
+                            cmd.Parameters.AddWithValue("@total", transaksi.TotalBayar);
                             idTransBaru = Convert.ToInt32(cmd.ExecuteScalar());
                         }
 
@@ -50,6 +53,7 @@ namespace Frugy_Store.Controller
                                 cmd.Parameters.AddWithValue("@idT", idTransBaru);
                                 cmd.Parameters.AddWithValue("@idP", item.IdProduk);
                                 cmd.Parameters.AddWithValue("@qty", item.Kuantitas);
+                                cmd.Parameters.AddWithValue("@total", transaksi.TotalBayar);
                                 cmd.ExecuteNonQuery();
                             }
 
