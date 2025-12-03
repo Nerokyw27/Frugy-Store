@@ -43,7 +43,7 @@
             btnTransaksiKsr.Location = new Point(240, 94);
             btnTransaksiKsr.Margin = new Padding(3, 2, 3, 2);
             btnTransaksiKsr.Name = "btnTransaksiKsr";
-            btnTransaksiKsr.Size = new Size(468, 611);
+            btnTransaksiKsr.Size = new Size(584, 949);
             btnTransaksiKsr.TabIndex = 0;
             btnTransaksiKsr.UseVisualStyleBackColor = false;
             btnTransaksiKsr.Click += btnTransaksiKsr_Click;
@@ -58,7 +58,7 @@
             btnLaporanKsr.Location = new Point(976, 94);
             btnLaporanKsr.Margin = new Padding(3, 2, 3, 2);
             btnLaporanKsr.Name = "btnLaporanKsr";
-            btnLaporanKsr.Size = new Size(468, 611);
+            btnLaporanKsr.Size = new Size(551, 949);
             btnLaporanKsr.TabIndex = 1;
             btnLaporanKsr.UseVisualStyleBackColor = false;
             btnLaporanKsr.Click += btnLaporanKsr_Click;
@@ -68,6 +68,7 @@
             btnLogoutKsr.BackColor = Color.YellowGreen;
             btnLogoutKsr.BackgroundImageLayout = ImageLayout.None;
             btnLogoutKsr.FlatAppearance.BorderSize = 0;
+            btnLogoutKsr.FlatStyle = FlatStyle.Flat;
             btnLogoutKsr.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btnLogoutKsr.Location = new Point(650, 20);
             btnLogoutKsr.Margin = new Padding(3, 2, 3, 2);

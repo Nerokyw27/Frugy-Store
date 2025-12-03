@@ -77,6 +77,7 @@
             Controls.Add(btnHapus);
             Controls.Add(lblDetail);
             Controls.Add(lblNama);
+            ForeColor = SystemColors.Desktop;
             Name = "ItemKeranjang";
             Padding = new Padding(10, 5, 10, 5);
             Size = new Size(310, 100);

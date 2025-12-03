@@ -60,9 +60,9 @@ namespace Frugy_Store.Views.View_Kasir
                 item.NamaProduk,
                 item.Harga,
                 item.Stok,
-                item.Satuan ?? "",     
-                item.Deskripsi ?? "", 
-                item.Lokasi ?? "", 
+                item.Satuan ?? "",
+                item.Deskripsi ?? "",
+                item.Lokasi ?? "",
                 item.Image
                 );
 
@@ -190,6 +190,14 @@ namespace Frugy_Store.Views.View_Kasir
                     MessageBox.Show("Error: " + ex.Message);
                 }
             }
-        }   
+        }
+
+        private void btnKembali_Click(object sender, EventArgs e)
+        {
+            V_BerandaKasir berandaKasir = new V_BerandaKasir(_idKasir);
+            berandaKasir.FormClosed += (s, args) => this.Close();
+            berandaKasir.Show();
+            this.Hide();
+        }
     }
 }

@@ -47,9 +47,10 @@
             // 
             flowLayoutPanel1.AutoScroll = true;
             flowLayoutPanel1.Controls.Add(panel1);
-            flowLayoutPanel1.Location = new Point(405, 205);
+            flowLayoutPanel1.Location = new Point(354, 154);
+            flowLayoutPanel1.Margin = new Padding(3, 2, 3, 2);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(1435, 763);
+            flowLayoutPanel1.Size = new Size(1256, 572);
             flowLayoutPanel1.TabIndex = 0;
             // 
             // panel1
@@ -62,16 +63,18 @@
             panel1.Controls.Add(lblNoHP);
             panel1.Controls.Add(lblEmail);
             panel1.Controls.Add(lblNamaKasir);
-            panel1.Location = new Point(3, 3);
+            panel1.Location = new Point(3, 2);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(450, 279);
+            panel1.Size = new Size(394, 209);
             panel1.TabIndex = 0;
             // 
             // btnEditKasir
             // 
-            btnEditKasir.Location = new Point(254, 225);
+            btnEditKasir.Location = new Point(222, 169);
+            btnEditKasir.Margin = new Padding(3, 2, 3, 2);
             btnEditKasir.Name = "btnEditKasir";
-            btnEditKasir.Size = new Size(84, 35);
+            btnEditKasir.Size = new Size(74, 26);
             btnEditKasir.TabIndex = 7;
             btnEditKasir.Text = "Edit";
             btnEditKasir.UseVisualStyleBackColor = true;
@@ -79,18 +82,19 @@
             // isiEmail
             // 
             isiEmail.AutoSize = true;
-            isiEmail.Font = new Font("Poppins", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            isiEmail.Location = new Point(133, 99);
+            isiEmail.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            isiEmail.Location = new Point(116, 74);
             isiEmail.Name = "isiEmail";
-            isiEmail.Size = new Size(126, 50);
+            isiEmail.Size = new Size(89, 26);
             isiEmail.TabIndex = 6;
             isiEmail.Text = "isiEmail";
             // 
             // btnHapusKasir
             // 
-            btnHapusKasir.Location = new Point(354, 225);
+            btnHapusKasir.Location = new Point(310, 169);
+            btnHapusKasir.Margin = new Padding(3, 2, 3, 2);
             btnHapusKasir.Name = "btnHapusKasir";
-            btnHapusKasir.Size = new Size(84, 35);
+            btnHapusKasir.Size = new Size(74, 26);
             btnHapusKasir.TabIndex = 5;
             btnHapusKasir.Text = "Hapus";
             btnHapusKasir.UseVisualStyleBackColor = true;
@@ -98,48 +102,49 @@
             // isiNoHP
             // 
             isiNoHP.AutoSize = true;
-            isiNoHP.Font = new Font("Poppins", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            isiNoHP.Location = new Point(136, 167);
+            isiNoHP.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            isiNoHP.Location = new Point(119, 125);
             isiNoHP.Name = "isiNoHP";
-            isiNoHP.Size = new Size(125, 50);
+            isiNoHP.Size = new Size(89, 26);
             isiNoHP.TabIndex = 4;
             isiNoHP.Text = "isiNoHp";
             // 
             // lblNoHP
             // 
             lblNoHP.AutoSize = true;
-            lblNoHP.Font = new Font("Poppins", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNoHP.Location = new Point(17, 167);
+            lblNoHP.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNoHP.Location = new Point(15, 125);
             lblNoHP.Name = "lblNoHP";
-            lblNoHP.Size = new Size(113, 50);
+            lblNoHP.Size = new Size(89, 26);
             lblNoHP.TabIndex = 3;
             lblNoHP.Text = "No HP :";
             // 
             // lblEmail
             // 
             lblEmail.AutoSize = true;
-            lblEmail.Font = new Font("Poppins", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblEmail.Location = new Point(17, 99);
+            lblEmail.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblEmail.Location = new Point(15, 74);
             lblEmail.Name = "lblEmail";
-            lblEmail.Size = new Size(110, 50);
+            lblEmail.Size = new Size(80, 26);
             lblEmail.TabIndex = 1;
             lblEmail.Text = "Email :";
             // 
             // lblNamaKasir
             // 
             lblNamaKasir.AutoSize = true;
-            lblNamaKasir.Font = new Font("Poppins", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblNamaKasir.Location = new Point(17, 28);
+            lblNamaKasir.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblNamaKasir.Location = new Point(15, 21);
             lblNamaKasir.Name = "lblNamaKasir";
-            lblNamaKasir.Size = new Size(182, 50);
+            lblNamaKasir.Size = new Size(127, 26);
             lblNamaKasir.TabIndex = 0;
             lblNamaKasir.Text = "Nama Kasir";
             // 
             // btnTambahKasir
             // 
-            btnTambahKasir.Location = new Point(1645, 153);
+            btnTambahKasir.Location = new Point(1439, 115);
+            btnTambahKasir.Margin = new Padding(3, 2, 3, 2);
             btnTambahKasir.Name = "btnTambahKasir";
-            btnTambahKasir.Size = new Size(194, 40);
+            btnTambahKasir.Size = new Size(170, 30);
             btnTambahKasir.TabIndex = 1;
             btnTambahKasir.Text = "Tambah Kasir";
             btnTambahKasir.UseVisualStyleBackColor = true;
@@ -148,10 +153,11 @@
             // btnKembaliMK
             // 
             btnKembaliMK.BackColor = Color.YellowGreen;
-            btnKembaliMK.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnKembaliMK.Location = new Point(367, 20);
+            btnKembaliMK.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnKembaliMK.Location = new Point(321, 15);
+            btnKembaliMK.Margin = new Padding(3, 2, 3, 2);
             btnKembaliMK.Name = "btnKembaliMK";
-            btnKembaliMK.Size = new Size(165, 44);
+            btnKembaliMK.Size = new Size(144, 33);
             btnKembaliMK.TabIndex = 8;
             btnKembaliMK.Text = "Kembali";
             btnKembaliMK.UseVisualStyleBackColor = false;
@@ -159,15 +165,16 @@
             // 
             // V_ManajemenKasir
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.managemen_akun_kasir;
             BackgroundImageLayout = ImageLayout.Stretch;
-            ClientSize = new Size(1902, 1033);
+            ClientSize = new Size(1664, 775);
             Controls.Add(btnKembaliMK);
             Controls.Add(btnTambahKasir);
             Controls.Add(flowLayoutPanel1);
             DoubleBuffered = true;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "V_ManajemenKasir";
             Text = "V_ManajemenKasir";
             flowLayoutPanel1.ResumeLayout(false);

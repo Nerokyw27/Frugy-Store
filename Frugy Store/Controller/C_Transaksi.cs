@@ -54,13 +54,13 @@ namespace Frugy_Store.Controller
                             }
 
                             // Update Stok
-                            string qStok = "UPDATE produk SET stok = stok - @qty WHERE id_produk = @idP";
-                            using (var cmd = new NpgsqlCommand(qStok, conn, trans))
-                            {
-                                cmd.Parameters.AddWithValue("@qty", item.Kuantitas);
-                                cmd.Parameters.AddWithValue("@idP", item.IdProduk);
-                                cmd.ExecuteNonQuery();
-                            }
+                            //string qStok = "UPDATE produk SET stok = stok - @qty WHERE id_produk = @idP";
+                            //using (var cmd = new NpgsqlCommand(qStok, conn, trans))
+                            //{
+                            //    cmd.Parameters.AddWithValue("@qty", item.Kuantitas);
+                            //    cmd.Parameters.AddWithValue("@idP", item.IdProduk);
+                            //    cmd.ExecuteNonQuery();
+                            //}
                         }
                         trans.Commit();
                         return true;

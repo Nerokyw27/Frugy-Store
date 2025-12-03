@@ -75,7 +75,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
-            ClientSize = new Size(1904, 1041);
+            ClientSize = new Size(1664, 775);
             Controls.Add(btnLogin);
             Controls.Add(tbPasswordLgn);
             Controls.Add(tbUsernameLgn);
@@ -83,7 +83,6 @@
             Name = "V_Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "V_Login";
-            WindowState = FormWindowState.Maximized;
             Load += V_Login_Load;
             ResumeLayout(false);
             PerformLayout();

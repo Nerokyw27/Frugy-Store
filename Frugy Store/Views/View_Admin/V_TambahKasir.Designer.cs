@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            label1 = new Label();
-            tbNamaLengkapTK = new TextBox();
-            label2 = new Label();
-            tbUsernameTK = new TextBox();
-            label3 = new Label();
-            tbPasswordTK = new TextBox();
-            label4 = new Label();
-            tbEmailTK = new TextBox();
-            label5 = new Label();
-            tbNoHpTK = new TextBox();
-            btnTambahTK = new Button();
             btnBatalTK = new Button();
+            btnTambahTK = new Button();
+            tbNoHpTK = new TextBox();
+            label5 = new Label();
+            tbEmailTK = new TextBox();
+            label4 = new Label();
+            tbPasswordTK = new TextBox();
+            label3 = new Label();
+            tbUsernameTK = new TextBox();
+            label2 = new Label();
+            tbNamaLengkapTK = new TextBox();
+            label1 = new Label();
             btnKembaliTK = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
@@ -62,141 +62,152 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(tbNamaLengkapTK);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(335, 164);
+            panel1.Location = new Point(293, 123);
+            panel1.Margin = new Padding(3, 2, 3, 2);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1115, 786);
+            panel1.Size = new Size(976, 590);
             panel1.TabIndex = 0;
             // 
-            // label1
+            // btnBatalTK
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(194, 77);
-            label1.Name = "label1";
-            label1.Size = new Size(248, 53);
-            label1.TabIndex = 0;
-            label1.Text = "Nama Lengkap";
-            // 
-            // tbNamaLengkapTK
-            // 
-            tbNamaLengkapTK.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbNamaLengkapTK.Location = new Point(204, 133);
-            tbNamaLengkapTK.Name = "tbNamaLengkapTK";
-            tbNamaLengkapTK.Size = new Size(694, 42);
-            tbNamaLengkapTK.TabIndex = 1;
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(194, 197);
-            label2.Name = "label2";
-            label2.Size = new Size(179, 53);
-            label2.TabIndex = 2;
-            label2.Text = "Username";
-            // 
-            // tbUsernameTK
-            // 
-            tbUsernameTK.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbUsernameTK.Location = new Point(204, 253);
-            tbUsernameTK.Name = "tbUsernameTK";
-            tbUsernameTK.Size = new Size(694, 42);
-            tbUsernameTK.TabIndex = 3;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(194, 317);
-            label3.Name = "label3";
-            label3.Size = new Size(168, 53);
-            label3.TabIndex = 4;
-            label3.Text = "Password";
-            // 
-            // tbPasswordTK
-            // 
-            tbPasswordTK.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbPasswordTK.Location = new Point(204, 373);
-            tbPasswordTK.Name = "tbPasswordTK";
-            tbPasswordTK.Size = new Size(694, 42);
-            tbPasswordTK.TabIndex = 5;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label4.Location = new Point(194, 436);
-            label4.Name = "label4";
-            label4.Size = new Size(103, 53);
-            label4.TabIndex = 6;
-            label4.Text = "Email";
-            // 
-            // tbEmailTK
-            // 
-            tbEmailTK.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbEmailTK.Location = new Point(204, 492);
-            tbEmailTK.Name = "tbEmailTK";
-            tbEmailTK.Size = new Size(694, 42);
-            tbEmailTK.TabIndex = 7;
-            // 
-            // label5
-            // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Poppins", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(194, 555);
-            label5.Name = "label5";
-            label5.Size = new Size(308, 53);
-            label5.TabIndex = 8;
-            label5.Text = "Nomor Handphone";
-            // 
-            // tbNoHpTK
-            // 
-            tbNoHpTK.Font = new Font("Poppins", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbNoHpTK.Location = new Point(204, 611);
-            tbNoHpTK.Name = "tbNoHpTK";
-            tbNoHpTK.Size = new Size(694, 42);
-            tbNoHpTK.TabIndex = 9;
+            btnBatalTK.Location = new Point(651, 528);
+            btnBatalTK.Margin = new Padding(3, 2, 3, 2);
+            btnBatalTK.Name = "btnBatalTK";
+            btnBatalTK.Size = new Size(121, 30);
+            btnBatalTK.TabIndex = 11;
+            btnBatalTK.Text = "Batal";
+            btnBatalTK.UseVisualStyleBackColor = true;
             // 
             // btnTambahTK
             // 
-            btnTambahTK.Location = new Point(902, 704);
+            btnTambahTK.Location = new Point(789, 528);
+            btnTambahTK.Margin = new Padding(3, 2, 3, 2);
             btnTambahTK.Name = "btnTambahTK";
-            btnTambahTK.Size = new Size(138, 40);
+            btnTambahTK.Size = new Size(121, 30);
             btnTambahTK.TabIndex = 10;
             btnTambahTK.Text = "Tambah";
             btnTambahTK.UseVisualStyleBackColor = true;
             btnTambahTK.Click += btnTambahTK_Click;
             // 
-            // btnBatalTK
+            // tbNoHpTK
             // 
-            btnBatalTK.Location = new Point(744, 704);
-            btnBatalTK.Name = "btnBatalTK";
-            btnBatalTK.Size = new Size(138, 40);
-            btnBatalTK.TabIndex = 11;
-            btnBatalTK.Text = "Batal";
-            btnBatalTK.UseVisualStyleBackColor = true;
+            tbNoHpTK.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbNoHpTK.Location = new Point(178, 458);
+            tbNoHpTK.Margin = new Padding(3, 2, 3, 2);
+            tbNoHpTK.Name = "tbNoHpTK";
+            tbNoHpTK.Size = new Size(608, 28);
+            tbNoHpTK.TabIndex = 9;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(170, 416);
+            label5.Name = "label5";
+            label5.Size = new Size(218, 29);
+            label5.TabIndex = 8;
+            label5.Text = "Nomor Handphone";
+            // 
+            // tbEmailTK
+            // 
+            tbEmailTK.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbEmailTK.Location = new Point(178, 369);
+            tbEmailTK.Margin = new Padding(3, 2, 3, 2);
+            tbEmailTK.Name = "tbEmailTK";
+            tbEmailTK.Size = new Size(608, 28);
+            tbEmailTK.TabIndex = 7;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.Location = new Point(170, 327);
+            label4.Name = "label4";
+            label4.Size = new Size(74, 29);
+            label4.TabIndex = 6;
+            label4.Text = "Email";
+            // 
+            // tbPasswordTK
+            // 
+            tbPasswordTK.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbPasswordTK.Location = new Point(178, 280);
+            tbPasswordTK.Margin = new Padding(3, 2, 3, 2);
+            tbPasswordTK.Name = "tbPasswordTK";
+            tbPasswordTK.Size = new Size(608, 28);
+            tbPasswordTK.TabIndex = 5;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(170, 238);
+            label3.Name = "label3";
+            label3.Size = new Size(120, 29);
+            label3.TabIndex = 4;
+            label3.Text = "Password";
+            // 
+            // tbUsernameTK
+            // 
+            tbUsernameTK.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbUsernameTK.Location = new Point(178, 190);
+            tbUsernameTK.Margin = new Padding(3, 2, 3, 2);
+            tbUsernameTK.Name = "tbUsernameTK";
+            tbUsernameTK.Size = new Size(608, 28);
+            tbUsernameTK.TabIndex = 3;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Location = new Point(170, 148);
+            label2.Name = "label2";
+            label2.Size = new Size(124, 29);
+            label2.TabIndex = 2;
+            label2.Text = "Username";
+            // 
+            // tbNamaLengkapTK
+            // 
+            tbNamaLengkapTK.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbNamaLengkapTK.Location = new Point(178, 100);
+            tbNamaLengkapTK.Margin = new Padding(3, 2, 3, 2);
+            tbNamaLengkapTK.Name = "tbNamaLengkapTK";
+            tbNamaLengkapTK.Size = new Size(608, 28);
+            tbNamaLengkapTK.TabIndex = 1;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.Location = new Point(170, 58);
+            label1.Name = "label1";
+            label1.Size = new Size(176, 29);
+            label1.TabIndex = 0;
+            label1.Text = "Nama Lengkap";
             // 
             // btnKembaliTK
             // 
             btnKembaliTK.BackColor = Color.YellowGreen;
-            btnKembaliTK.Font = new Font("Poppins", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnKembaliTK.Location = new Point(367, 20);
+            btnKembaliTK.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            btnKembaliTK.Location = new Point(346, 30);
+            btnKembaliTK.Margin = new Padding(3, 2, 3, 2);
             btnKembaliTK.Name = "btnKembaliTK";
-            btnKembaliTK.Size = new Size(165, 44);
+            btnKembaliTK.Size = new Size(144, 33);
             btnKembaliTK.TabIndex = 12;
             btnKembaliTK.Text = "Kembali";
             btnKembaliTK.UseVisualStyleBackColor = false;
             // 
             // V_TambahKasir
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.Edit_Akun_Kasir;
-            ClientSize = new Size(1902, 1033);
+            ClientSize = new Size(1664, 775);
             Controls.Add(btnKembaliTK);
             Controls.Add(panel1);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "V_TambahKasir";
             Text = "V_TambahKasir";
+            WindowState = FormWindowState.Maximized;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
