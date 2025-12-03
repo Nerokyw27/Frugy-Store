@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_BerandaAdmin));
             btnTransaksiAdm = new Button();
             btnLaporanAdm = new Button();
             btnProdukAdm = new Button();
             button2 = new Button();
+            btnLogout = new Button();
             SuspendLayout();
             // 
             // btnTransaksiAdm
@@ -94,12 +96,26 @@
             button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             // 
+            // btnLogout
+            // 
+            btnLogout.BackColor = Color.Transparent;
+            btnLogout.FlatAppearance.BorderSize = 0;
+            btnLogout.FlatStyle = FlatStyle.Flat;
+            btnLogout.Image = (Image)resources.GetObject("btnLogout.Image");
+            btnLogout.Location = new Point(313, 12);
+            btnLogout.Name = "btnLogout";
+            btnLogout.Size = new Size(345, 61);
+            btnLogout.TabIndex = 4;
+            btnLogout.UseVisualStyleBackColor = false;
+            btnLogout.Click += btnLogout_Click;
+            // 
             // V_BerandaAdmin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = Properties.Resources.tampilan_Utama_Admin_kosongan;
             ClientSize = new Size(1904, 1041);
+            Controls.Add(btnLogout);
             Controls.Add(button2);
             Controls.Add(btnProdukAdm);
             Controls.Add(btnLaporanAdm);
@@ -118,5 +134,6 @@
         private Button btnLaporanAdm;
         private Button btnProdukAdm;
         private Button button2;
+        private Button btnLogout;
     }
 }

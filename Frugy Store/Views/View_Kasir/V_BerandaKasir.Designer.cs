@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(V_BerandaKasir));
             btnTransaksiKsr = new Button();
             btnLaporanKsr = new Button();
             btnLogoutKsr = new Button();
@@ -65,18 +66,19 @@
             // 
             // btnLogoutKsr
             // 
-            btnLogoutKsr.BackColor = Color.YellowGreen;
+            btnLogoutKsr.BackColor = Color.Transparent;
             btnLogoutKsr.BackgroundImageLayout = ImageLayout.None;
             btnLogoutKsr.FlatAppearance.BorderSize = 0;
             btnLogoutKsr.FlatStyle = FlatStyle.Flat;
             btnLogoutKsr.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btnLogoutKsr.Location = new Point(650, 20);
+            btnLogoutKsr.Image = (Image)resources.GetObject("btnLogoutKsr.Image");
+            btnLogoutKsr.Location = new Point(313, 11);
             btnLogoutKsr.Margin = new Padding(3, 2, 3, 2);
             btnLogoutKsr.Name = "btnLogoutKsr";
-            btnLogoutKsr.Size = new Size(156, 38);
+            btnLogoutKsr.Size = new Size(347, 70);
             btnLogoutKsr.TabIndex = 2;
-            btnLogoutKsr.Text = "Logout";
             btnLogoutKsr.UseVisualStyleBackColor = false;
+            btnLogoutKsr.Click += btnLogoutKsr_Click;
             // 
             // V_BerandaKasir
             // 

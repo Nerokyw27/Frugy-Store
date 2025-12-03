@@ -141,8 +141,8 @@ namespace Frugy_Store.Controller
                     t.metode_pembayaran AS ""Metode"",
                     t.total_bayar AS ""Total Belanja""
                 FROM transaksi t
-                LEFT JOIN detail_transaksi dt ON t.id_transaksi = dt.transaksi_id_transaksi
-                WHERE t.id_akun = @idKasir 
+                LEFT JOIN detail_transaksi dt ON t.id_transaksi = dt.id_transaksi
+                WHERE t.akun_id = @idKasir 
                   AND t.tanggal_transaksi BETWEEN @start AND @end
                 GROUP BY t.id_transaksi, t.tanggal_transaksi, t.metode_pembayaran
                 ORDER BY t.tanggal_transaksi DESC";

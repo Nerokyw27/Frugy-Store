@@ -14,6 +14,7 @@ namespace Frugy_Store.Views.View_Kasir
     public partial class V_BerandaKasir : Form
     {
         private int _idKasir;
+        private string _namaKasir;
         public V_BerandaKasir(int idKasir)
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace Frugy_Store.Views.View_Kasir
 
         private void btnLaporanKsr_Click(object sender, EventArgs e)
         {
-            V_LaporanKasir laporanKasir = new V_LaporanKasir(_idKasir, "saya");
+            V_LaporanKasir laporanKasir = new V_LaporanKasir(_idKasir, _namaKasir);
             laporanKasir.FormClosed += (s, args) => this.Close();
             laporanKasir.Show();
             this.Hide();
@@ -39,6 +40,14 @@ namespace Frugy_Store.Views.View_Kasir
         private void V_BerandaKasir_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLogoutKsr_Click(object sender, EventArgs e)
+        {
+            V_Login logout = new V_Login();
+            logout.FormClosed += (s, args) => this.Close();
+            logout.Show();
+            this.Hide();
         }
     }
 }

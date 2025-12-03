@@ -15,6 +15,7 @@ namespace Frugy_Store.Views.View_Kasir
     {
         private C_Laporan _controller;
         private int _idKasirTarget;
+        private int _namaKasir;
         public V_LaporanKasir(int idKasir, string namaKasir)
         {
             InitializeComponent();

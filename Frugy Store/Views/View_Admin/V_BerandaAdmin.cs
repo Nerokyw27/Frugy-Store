@@ -59,5 +59,13 @@ namespace Frugy_Store.Views.View_Admin
             laporanAdm.Show();
             this.Hide();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            V_Login logout = new V_Login();
+            logout.FormClosed += (s, args) => this.Close();
+            logout.Show();
+            this.Hide();
+        }
     }
 }

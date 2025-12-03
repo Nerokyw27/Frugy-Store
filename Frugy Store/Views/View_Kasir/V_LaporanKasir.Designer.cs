@@ -46,7 +46,7 @@
             lblNamaKasir.BackColor = Color.Transparent;
             lblNamaKasir.FlatStyle = FlatStyle.Flat;
             lblNamaKasir.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblNamaKasir.Location = new Point(1550, 156);
+            lblNamaKasir.Location = new Point(1506, 156);
             lblNamaKasir.Name = "lblNamaKasir";
             lblNamaKasir.Size = new Size(156, 37);
             lblNamaKasir.TabIndex = 0;
@@ -83,10 +83,10 @@
             lblTotalOmset.AutoSize = true;
             lblTotalOmset.BackColor = Color.Transparent;
             lblTotalOmset.FlatStyle = FlatStyle.Flat;
-            lblTotalOmset.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalOmset.Location = new Point(1550, 234);
+            lblTotalOmset.Font = new Font("Segoe UI Semibold", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalOmset.Location = new Point(1515, 237);
             lblTotalOmset.Name = "lblTotalOmset";
-            lblTotalOmset.Size = new Size(184, 40);
+            lblTotalOmset.Size = new Size(147, 32);
             lblTotalOmset.TabIndex = 4;
             lblTotalOmset.Text = "Omset: Rp 0";
             // 
